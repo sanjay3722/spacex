@@ -1,0 +1,226 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+.row{
+  display: flex;
+
+  .col{
+  }
+  .col-left{
+    width: 20%;
+    padding: 20px;
+    background: #ffffff;
+  }
+
+  .col-right{
+    width: 80%;
+  }
+
+}
+
+.head{
+  font-size: 1rem;
+  margin: 0 0 20px 0px;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px 0px;
+
+  .card-title{
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cccccc;
+  }
+  .card-body{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    .card-item{
+      padding: 5px;
+      margin: 5px;
+      border-radius: 3px;
+      background: #1cc106;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  }
+}
+.wid50{
+  width: 45%;
+}
+.wid25{
+  width: 23%;
+}
+
+.appliedFilter{
+  display: flex;
+  margin: 0px 0px 20px 25px;
+
+  .filter{
+    margin: 0 20px 0 0px;
+    background-color: #1cc106;
+    color: #333333;
+    font-size: 0.9rem;
+    padding: 5px 20px;
+
+    span{
+      margin:0 0 0 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+  .clearFilter{
+    border: 1px solid #cccccc;
+    background-color: #f5f5f5;
+    color: #333333;
+    font-size: 0.9rem;
+    padding: 5px 20px;
+    margin: 0 0 0 0px;
+  }
+}
+.program{
+  margin: 0px 0px 0 25px;
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+
+  .box{
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 0px 20px 20px 0px;
+    box-shadow: 0 0 5px #ffffff;
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 10px #e0e0e0;
+    }
+
+    .box-image{
+      margin: 0 0 20px 0px;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      img{
+        width: 50%;
+      }
+    }
+    .box-content{
+      font-size: 0.85rem;
+
+      .fal{
+        color: #0155d3;
+        margin: 0 0 10px 0px;
+      }
+      ul{
+        margin: 0 0 10px 25px;
+        li{
+          color: #0155d3;
+        }
+      }
+
+      p{
+        margin-bottom: 10px;
+        color: #0155d3;
+        b{
+          color: #333333;
+        }
+
+      }
+
+    }
+
+  }
+}
+
+.noData{
+  display: flex;
+  padding: 10rem 0;
+
+  h1{
+    text-align: center;
+  }
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 700px) {
+  /* Styles */
+  header{
+    text-align: center;
+  }
+  .row{
+    display: block !important;
+  }
+  .row .col-left{
+    width: 100% !important;
+  }
+
+  .row .col-right{
+    width: 100% !important;
+  }
+
+  .program{
+    display: block !important;
+    margin: 0px !important;
+  }
+  .wid25{
+    width: 100% !important;
+  }
+
+  .program .box .box-image{
+    height: auto !important;
+  }
+  .program .box .box-image img{
+    width: 75% !important;
+  }
+
+}
+
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-width : 701px) and (max-width : 1024px) {
+  /* Styles */
+  header{
+    text-align: center;
+  }
+  // .row{
+  //   display: block !important;
+  // }
+  .row .col-left{
+    width: 30% !important;
+  }
+
+  .row .col-right{
+    width: 70% !important;
+  }
+
+  .wid50{
+    width: 43.5%!important;
+  }
+  .wid25{
+    width: 45% !important;
+  }
+
+  .program .box .box-image{
+    height: auto !important;
+  }
+  .program .box .box-image img{
+    width: 75% !important;
+  }
+  }
