@@ -58,9 +58,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 <a href="https://spacex-launch-programss.herokuapp.com/home" target="_blank">
   <img src="https://github.com/sanjay3722/spacex/blob/main/spacex.png?raw=true" alt="spacex launch programs"/>
+  <br><br>
+
   <img src="https://github.com/sanjay3722/spacex/blob/main/spacex_1.png?raw=true" alt="spacex launch programs"/>
 </a>
   
 ### Author
-* Updated : 22/09/2020
+* Updated : 05/11/2020
 * Author  : Sanjay Kumar
