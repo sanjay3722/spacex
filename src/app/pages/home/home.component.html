@@ -4,30 +4,34 @@
   </div>
 
   <div class="col col-right">
+    <!-- Applied Filter Block -->
     <div class="appliedFilter" *ngIf="filters.launch_success || filters.land_success || filters.launch_year">
       <ng-container *ngIf="filters.launch_year">
         <div class="filter">
           Year: {{filters.launch_year}}
-          <span (click)="removeFilter({filter: 'year'});">&times;</span>
+          <span (click)="removeFilter('launchYear');">&times;</span>
         </div>
       </ng-container>
       <ng-container *ngIf="filters.land_success">
         <div class="filter">
           Land Successful: {{filters.land_success}}
-          <span (click)="removeFilter({filter: 'land'});">&times;</span>
+          <span (click)="removeFilter('landSuccess');">&times;</span>
         </div>
       </ng-container>
       <ng-container *ngIf="filters.launch_success">
         <div class="filter">
           Launch Successful: {{filters.launch_success}}
-          <span (click)="removeFilter({filter: 'launch'});">&times;</span>
+          <span (click)="removeFilter('launchSuccess');">&times;</span>
         </div>
       </ng-container>
       <ng-container *ngIf="filters.launch_success || filters.land_success || filters.launch_year">
-        <button class="clearFilter" (click)="removeFilter({filter : 'clear'});">Clear Filter</button>
+        <button class="clearFilter" (click)="removeFilter('clear');">Clear Filter</button>
       </ng-container>
     </div>
+    <!-- Applied Filter Block -->
+ 
 
+    <!-- SpaceX Programs -->
     <div class="program" *ngIf="spaceXprogramsData">
       <ng-container *ngIf="spaceXprogramsData.length != 0; else noData">
         <div class="box wid25" *ngFor="let spaceX of spaceXprogramsData">
@@ -54,9 +58,8 @@
           <h1>No Data Found!</h1>
         </div>
       </ng-template>
-
-
-
     </div>
+    <!-- SpaceX Programs -->
+
   </div>
 </div>
