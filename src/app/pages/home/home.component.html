@@ -1,9 +1,9 @@
 <div class="row">
-  <div class="col col-left">
+  <div class="row__colLeft">
     <app-filter></app-filter>
   </div>
 
-  <div class="col col-right">
+  <div class="row__colRight">
     <!-- Applied Filter Block -->
     <div class="appliedFilter" *ngIf="filters.launch_success || filters.land_success || filters.launch_year">
       <ng-container *ngIf="filters.launch_year">
@@ -34,13 +34,13 @@
     <!-- SpaceX Programs -->
     <div class="program" *ngIf="spaceXprogramsData">
       <ng-container *ngIf="spaceXprogramsData.length != 0; else noData">
-        <div class="box wid25" *ngFor="let spaceX of spaceXprogramsData">
-          <div class="box-image">
+        <div class="program__box wid25" *ngFor="let spaceX of spaceXprogramsData; let i = index">
+          <div class="program__box__boxImage">
             <img src="{{ spaceX.links.mission_patch_small }}" alt="img">
           </div>
-          <div class="box-content">
-            <p class="fal">{{ spaceX.mission_name }}</p>
-            <ng-container *ngIf="spaceX.mission_id">
+          <div class="program__box__boxContent">
+            <p class="program__box__boxContent__fal">{{ spaceX.mission_name }} #{{ i + 1 }}</p>
+            <ng-container *ngIf="spaceX.mission_id != 0">
               <p class="mission"><b>Missions ids:</b></p>
               <ul>
                 <li *ngFor="let id of spaceX.mission_id">{{ id }}</li>
@@ -55,7 +55,9 @@
       </ng-container>
       <ng-template #noData>
         <div class="noData">
-          <h1>No Data Found!</h1>
+          <img src="https://nektony.com/wp-content/uploads/2016/10/cloud-computing.svg" alt="No Data found" class="noData__image">
+          <h1>Sorry! No Data Found</h1>
+          <h3>Try something else</h3>
         </div>
       </ng-template>
     </div>

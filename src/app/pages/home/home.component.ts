@@ -21,8 +21,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(){
     this.activatedRoute.queryParams.subscribe(params => {
-      
-      if(Object.keys(params).length != 0){
+
+      if(Object.keys(params).length !== 0){
         this.filters = params;
         this.getSpaceXPrograms(this.filters);
       }else{

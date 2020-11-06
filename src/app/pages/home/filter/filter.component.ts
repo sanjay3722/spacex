@@ -17,17 +17,20 @@ export class FilterComponent implements OnInit {
     launch_success: '',
     land_success: ''
   };
+
+  appliedFilters: any;
+
   constructor(
     private spacexService: SpacexService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-  ) { 
-     
+  ) {
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.appliedFilters = params;
+    });
   }
 
-  ngOnInit() {
-     
-  }
+  ngOnInit() { }
 
   addFilter(filterLabel: string, filterVal: any){
 

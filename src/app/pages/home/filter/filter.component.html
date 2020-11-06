@@ -1,24 +1,23 @@
   <h2 class="head">Filters</h2>
-
   <div class="card">
-    <div class="card-title">Launch Year</div>
-    <div class="card-body">
-      <div class="card-item wid50" (click)="addFilter('launchYear',  year)" *ngFor="let year of years">{{ year }}</div>
+    <div class="card__card-title">Launch Year</div>
+    <div class="card__card-body">
+      <div class="card__card-body__card-item wid50" [ngClass]="{'card__card-body__card-item--active': appliedFilters.launch_year == year}" (click)="addFilter('launchYear',  year)" *ngFor="let year of years">{{ year }}</div>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-title">Successful Launch</div>
-    <div class="card-body">
-      <div class="card-item wid50" (click)="addFilter('launchSuccess', true)">True</div>
-      <div class="card-item wid50" (click)="addFilter('launchSuccess', false)">False</div>
+    <div class="card__card-title">Successful Launch</div>
+    <div class="card__card-body">
+      <div class="card__card-body__card-item wid50" [ngClass]="{'card__card-body__card-item--active': appliedFilters.launch_success === 'true'}" (click)="addFilter('launchSuccess', true)">True</div>
+      <div class="card__card-body__card-item wid50" [ngClass]="{'card__card-body__card-item--active': appliedFilters.launch_success === 'false'}" (click)="addFilter('launchSuccess', false)">False</div>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-title">Successful Landing</div>
-    <div class="card-body">
-      <div class="card-item wid50" (click)="addFilter('landSuccess', true)">True</div>
-      <div class="card-item wid50" (click)="addFilter('landSuccess', false)">False</div>
+    <div class="card__card-title">Successful Landing</div>
+    <div class="card__card-body">
+      <div class="card__card-body__card-item wid50" [ngClass]="{'card__card-body__card-item--active': appliedFilters.land_success === 'true'}" (click)="addFilter('landSuccess', true)">True</div>
+      <div class="card__card-body__card-item wid50" [ngClass]="{'card__card-body__card-item--active': appliedFilters.land_success === 'false'}" (click)="addFilter('landSuccess', false)">False</div>
     </div>
   </div>
